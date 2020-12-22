@@ -95,17 +95,5 @@ func (g *world) Set(x, y int, v bool) {
 }
 
 func nextCellState(myLife bool, neighbors int) bool {
-	if myLife {
-		if neighbors <= 1 || neighbors >= 4 {
-			return false
-		}
-		if neighbors == 2 || neighbors == 3 {
-			return true
-		}
-	} else {
-		if neighbors == 3 {
-			return true
-		}
-	}
-	return false
+	return (myLife && neighbors == 2) || neighbors == 3
 }
