@@ -17,6 +17,7 @@ func main() {
 	game.Set(4, 3, true)
 	game.Set(13, 2, true)
 	game.Set(12, 1, true)
+	game.Set(12, 3, true)
 	for {
 		render(game)
 		game.Step()
